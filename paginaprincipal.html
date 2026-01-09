@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Corazón Activo</title>
+
+<style>
+body{
+  background:#ffe5e5;
+  font-family:Arial, sans-serif;
+  overflow-x:hidden;
+}
+
+/* BURBUJAS */
+.burbujas span{
+  position:fixed;
+  bottom:-50px;
+  background:rgba(255,255,255,0.4);
+  border-radius:50%;
+  animation:subir 15s linear infinite;
+}
+.burbujas span:nth-child(1){width:40px;height:40px;left:10%;animation-duration:12s;}
+.burbujas span:nth-child(2){width:60px;height:60px;left:25%;animation-duration:18s;}
+.burbujas span:nth-child(3){width:30px;height:30px;left:40%;animation-duration:10s;}
+.burbujas span:nth-child(4){width:70px;height:70px;left:60%;animation-duration:20s;}
+.burbujas span:nth-child(5){width:50px;height:50px;left:80%;animation-duration:14s;}
+
+@keyframes subir{
+  0%{transform:translateY(0);opacity:0;}
+  50%{opacity:1;}
+  100%{transform:translateY(-110vh);opacity:0;}
+}
+
+/* MENÚ */
+.menu td{
+  font-weight:bold;
+  padding:15px;
+}
+.menu a{
+  text-decoration:none;
+  color:black;
+}
+
+/* TARJETA */
+.card{
+  background:#ffe3ec;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* FLIP CARD */
+.flip-card{
+  width:100%;
+  height:220px;
+  perspective:1000px;
+}
+.flip-inner{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:0.8s;
+  transform-style:preserve-3d;
+}
+.flip-card:hover .flip-inner{
+  transform:rotateY(180deg);
+}
+.flip-front, .flip-back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+.flip-front{
+  background:#ffb3c6;
+  text-align:center;
+}
+.flip-back{
+  background:#ff6f91;
+  color:white;
+  transform:rotateY(180deg);
+}
+</style>
+</head>
+
+<body>
+
+<div class="burbujas">
+<span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<table width="90%" align="center" cellpadding="15" cellspacing="20" bgcolor="#ffc0cb">
+
+<!-- MENÚ -->
+<tr class="menu">
+<td bgcolor="#ff9999" align="center"><a href="Prevención.html">Prevención</a></td>
+<td bgcolor="#ffcc99" align="center"><a href="bienestar.html">Bienestar</a></td>
+<td bgcolor="#99ff99" align="center"><a href="Nutrición.html">Nutrición</a></td>
+<td bgcolor="#99ccff" align="center"><a href="emergencia.html">Emergencias</a></td>
+</tr>
+
+<tr><td colspan="4"><hr></td></tr>
+
+<!-- ENCABEZADO -->
+<tr>
+<td colspan="4" align="center" bgcolor="#ffb6c1">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU1RJzOiB08xhwvy3jPfO2zGLPF96aNwUtKRnaF2pwTg&s=10" width="25%">
+<h2>Corazón Activo – Cuidando tu salud ❤</h2>
+</td>
+</tr>
+
+<!-- QUÉ ES -->
+<tr><td colspan="4"><div class="card">
+<h2> ¿Qué es la salud cardiovascular?</h2>
+<p>
+La salud cardiovascular es un aspecto fundamental de nuestra vida, ya que el corazón es el motor que impulsa la circulación de la sangre y, por lo tanto, de todos los nutrientes y oxígeno que nuestro cuerpo necesita para funcionar correctamente.
+</p>
+</div></td></tr>
+
+<!-- IMPORTANCIA -->
+<tr><td colspan="4"><div class="card">
+<h2>❤ ¿Por qué es importante cuidar el corazón?</h2>
+<p>
+el corazón es el órgano más importante del ser humano, una máquina que trabaja las 24 horas del día, los 7 días a la semana sin parar. Sin el corazón, ningún otro órgano funcionaría, por eso es fundamental cuidarlo en todas las etapas de la vida.
+</p>
+</div></td></tr>
+
+<!-- FUNCIONAMIENTO -->
+<tr><td colspan="4"><div class="card">
+<h2>Funcionamiento</h2>
+<p>tu corazón es una especie de bomba, o dos bombas en una. El lado derecho recibe sangre del resto del cuerpo y la bombea hacia los pulmones. El lado izquierdo hace justo lo contrario: recibe sangre procedente de los pulmones y la bombea al resto del cuerpo. Cómo late el corazón</p>
+<ul>
+<li>Corazón: bombea la sangre.</li>
+<li>Sangre: transporta oxígeno.</li>
+<li>Vasos: permiten la circulación.</li>
+</ul>
+</div></td></tr>
+
+<!-- ENFERMEDADES -->
+<tr><td colspan="4"><div class="card">
+<h2>⚠ Enfermedades cardiovasculares</h2>
+<ul>
+<li>Ataque cardíaco: Cuando parte del músculo cardíaco muere debido a la pérdida de flujo sanguíneo</li>
+<li>Angina: Dolor en el pecho por falta de flujo sanguíneo.</li>
+<li>Insuficiencia cardíaca: Cuando su corazón no puede bombear suficiente sangre para satisfacer las necesidades de su cuerpo.</li>
+<li>Colesterol alto</li>
+</ul>
+</div></td></tr>
+
+<!-- ALIMENTACIÓN -->
+<tr><td colspan="4"><div class="card">
+<h2> Alimentación saludable</h2>
+<p>La dieta mediterránea está considerada como la más cardiosaludable, es decir, la que mejor ayuda a prevenir las enfermedades cardiovasculares. Es una dieta que se caracteriza por un alto contenido de frutas, verduras, pescado azul, legumbres, frutos secos y aceite de oliva</p>
+<ul>
+<li>verduras como hojas verdes (espinaca, berza, kale, repollo), brócoli y zanahorias.</li>
+<li>frutas como manzanas, bananas, naranjas, peras, uvas y ciruelas pasas.</li>
+<li>granos integrales como avena común, arroz integral y pan o tortillas integrales.</li>
+</ul>
+</div></td></tr>
+
+<!-- EJERCICIO -->
+<tr><td colspan="4"><div class="card">
+<h2> Ejercicio</h2>
+<p>El ejercicio cardiovascular también se denomina ejercicio aeróbico. El ejercicio aeróbico emplea los músculos grandes y puede realizarse durante largo tiempo. Por ejemplo, las caminatas, el trote, la natación y el ciclismo son actividades aeróbicas.</p>
+<ul>
+<li>Caminar 30 minutos</li>
+<li>Bailar</li>
+<li>Ciclismo</li>
+</ul>
+</div></td></tr>
+
+<!-- SÍNTOMAS -->
+<tr><td colspan="4"><div class="card">
+<h2> Síntomas</h2>
+<ul>
+<li>Dolor, entumecimiento u hormigueo en los hombros, los brazos, el cuello, la mandíbula o la espalda</li>
+<li>Dificultad para respirar cuando estás activo, en reposo o recostado.</li>
+<li>Dolor en el pecho que mejora al descansar.</li>
+<li>Aturdimiento</li>
+<li>Mareos</li>
+<li>confusion</li>
+</ul>
+</div></td></tr>
+
+<!-- SABÍAS QUE (FLIP CARDS) -->
+<tr><td colspan="4" align="center"><h2> Sabías que…</h2></td></tr>
+<tr>
+<td>
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><h3>❤  Latidos</h3></div>
+<div class="flip-back"><p>El corazón late más de 100 000 veces al día.</p></div>
+</div></div>
+</td>
+<td>
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><h3> Sangre</h3></div>
+<div class="flip-back"><p>Bombea cerca de 7 000 litros diarios.</p></div>
+</div></div>
+</td>
+<td>
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><h3>Caminar</h3></div>
+<div class="flip-back"><p>Reduce el riesgo cardiovascular.</p></div>
+</div></div>
+</td>
+<td></td>
+</tr>
+
+<!-- GLOSARIO (FLIP CARDS) -->
+<tr><td colspan="4" align="center"><h2> Mini glosario</h2></td></tr>
+<tr>
+<td>
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><h3>Hipertensión</h3></div>
+<div class="flip-back"><p>es cuando uno o ambos números de la presión arterial son de 130/80 mm Hg o mayores la mayoría de las veces.</p></div>
+</div></div>
+</td>
+<td>
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><h3>Colesterol</h3></div>
+<div class="flip-back"><p>sustancia cerosa y parecida a la grasa que se encuentra en todas las células de su cuerpo.</p></div>
+</div></div>
+</td>
+<td>
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><h3>Infarto</h3></div>
+<div class="flip-back"><p>flujo sanguíneo se bloquea el corazón sufre por la falta de oxígeno y las células cardíacas mueren
+</p></div>
+</div></div>
+</td>
+<td></td>
+</tr>
+
+<!-- MENSAJE FINAL -->
+<tr><td colspan="4"><div class="card">
+<h2> Mensaje final </h2>
+<p>
+"el corazón es una flecha. Exige puntería para dar en el blanco. Cree en tu corazón que estás destinado a vivir una vida llena de pasión, propósito, magia y milagros. Sigue tu corazón, escucha tu voz interior y deja de preocuparte por lo que piensen los demás."
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREaGNTCF-ojgS-B7tfdJADhrXpLFOsOT9EnPfmJB195Q&s=10" width="25%">
+</p>
+</div></td></tr>
+
+<!-- AUTOR -->
+<tr><td colspan="4"><div class="card">
+<h2>✍️ Autor</h2>
+<p><strong>Niurka Reyes</strong> – 3° Bachillerato Técnico</p>
+</div></td></tr>
+
+</table>
+</body>
+</html>

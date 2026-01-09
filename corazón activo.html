@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Corazón Activo</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  background:linear-gradient(180deg, #ffd1e8, #ff9acb);
+  overflow:hidden;
+  font-family:'Arial', sans-serif;
+}
+
+/* ================= PARTÍCULAS ================= */
+.particula{
+  position:absolute;
+  opacity:0.6;
+  animation: flotar linear infinite;
+}
+
+/* CÍRCULOS */
+.circulo{
+  width:10px;
+  height:10px;
+  background:#ff4d6d;
+  border-radius:50%;
+}
+
+/* BURBUJAS */
+.burbuja{
+  width:16px;
+  height:16px;
+  border:2px solid rgba(255,77,109,0.6);
+  border-radius:50%;
+}
+
+/* CORAZONES PEQUEÑOS */
+.mini-corazon{
+  width:14px;
+  height:14px;
+  background:#ff1f1f;
+  position:relative;
+  transform:rotate(-45deg);
+}
+
+.mini-corazon::before,
+.mini-corazon::after{
+  content:"";
+  width:14px;
+  height:14px;
+  background:#ff1f1f;
+  border-radius:50%;
+  position:absolute;
+}
+
+.mini-corazon::before{ top:-7px; left:0; }
+.mini-corazon::after{ left:7px; top:0; }
+
+@keyframes flotar{
+  from{ transform:translateY(100vh); }
+  to{ transform:translateY(-120vh); }
+}
+
+/* ================= CONTENEDOR ================= */
+.portada{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  color:#b3002d;
+  z-index:2;
+}
+
+/* TÍTULO MÁS ARRIBA */
+.portada h1{
+  font-size:3em;
+  margin-bottom:60px;
+}
+
+/* ================= LATIDO ================= */
+@keyframes latido{
+  0%{ transform:rotate(-45deg) scale(1); }
+  30%{ transform:rotate(-45deg) scale(1.15); }
+  50%{ transform:rotate(-45deg) scale(1); }
+  70%{ transform:rotate(-45deg) scale(1.1); }
+  100%{ transform:rotate(-45deg) scale(1); }
+}
+
+/* ================= CORAZÓN BOTÓN ================= */
+.corazon{
+  width:100px;
+  height:100px;
+  background:#e60000;
+  position:relative;
+  transform:rotate(-45deg);
+  margin:0 auto;
+  box-shadow:0 0 30px #ff4d4d;
+  animation: latido 1.4s infinite;
+}
+
+.corazon::before,
+.corazon::after{
+  content:"";
+  width:100px;
+  height:100px;
+  background:#e60000;
+  border-radius:50%;
+  position:absolute;
+}
+
+.corazon::before{ top:-50px; left:0; }
+.corazon::after{ left:50px; top:0; }
+
+.corazon:hover{
+  animation-play-state:paused;
+  transform:rotate(-45deg) scale(1.2);
+}
+
+/* LINK */
+.corazon-link{
+  display:inline-block;
+}
+
+/* FRASE */
+.eslogan{
+  margin-top:30px;
+  font-size:1.2em;
+  color:#7a001f;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== PARTÍCULAS ===== -->
+<!-- CÍRCULOS -->
+<div class="particula circulo" style="left:5%; animation-duration:18s;"></div>
+<div class="particula circulo" style="left:15%; animation-duration:22s;"></div>
+<div class="particula circulo" style="left:30%; animation-duration:20s;"></div>
+<div class="particula circulo" style="left:45%; animation-duration:26s;"></div>
+<div class="particula circulo" style="left:60%; animation-duration:19s;"></div>
+<div class="particula circulo" style="left:75%; animation-duration:23s;"></div>
+<div class="particula circulo" style="left:90%; animation-duration:21s;"></div>
+
+<!-- BURBUJAS -->
+<div class="particula burbuja" style="left:12%; animation-duration:25s;"></div>
+<div class="particula burbuja" style="left:28%; animation-duration:27s;"></div>
+<div class="particula burbuja" style="left:52%; animation-duration:24s;"></div>
+<div class="particula burbuja" style="left:68%; animation-duration:29s;"></div>
+<div class="particula burbuja" style="left:85%; animation-duration:26s;"></div>
+
+<!-- MINI CORAZONES -->
+<div class="particula mini-corazon" style="left:20%; animation-duration:30s;"></div>
+<div class="particula mini-corazon" style="left:40%; animation-duration:28s;"></div>
+<div class="particula mini-corazon" style="left:65%; animation-duration:32s;"></div>
+<div class="particula mini-corazon" style="left:80%; animation-duration:34s;"></div>
+
+<!-- ===== CONTENIDO ===== -->
+<div class="portada">
+  <h1>Corazón Activo</h1>
+
+  <a href="paginaprincipal.html" class="corazon-link">
+    <div class="corazon"></div>
+  </a>
+
+  <p class="eslogan">Cuidar tu corazón es cuidar tu vida ❤️</p>
+</div>
+
+</body>
+</html>
